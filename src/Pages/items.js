@@ -27,7 +27,7 @@ const Items = () => {
       setUserData({...userData, [name]: value,latitude,longitude})
     
     };
-//connecting with firebase
+
 const submitData = async (event) => {
   event.preventDefault();
   const { item_name,description,latitude,longitude } = userData;

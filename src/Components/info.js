@@ -3,7 +3,7 @@ import React from 'react'
 const Info = () => {
   return (
     <div className='info-bg'>
-    <h1 className='info-title'>The Probelm</h1>
+    <h1 className='info-title'>The Problem</h1>
     <div className='card-container'>
     <div className="card">
     <img src="https://ik.imagekit.io/htocafs1d/FoodSanta_Images/630a50f0360f2_DBbCpVH-F.avif?updatedAt=1679851962519" className="card-img-top" alt="Image"/>
