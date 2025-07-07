@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# 📦 FoodSanta
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**FoodSanta** is a full-stack React web application that aims to solve the problem of Zero Hunger (UN SDG Goal 2) and Food wastage by enabling users to list, discover, and share food items in real-time using Firebase and Google Maps. It offers a personalized account experience, secure authentication, and responsive UI with a festive-inspired design.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔐 **Firebase Authentication** (Email/Password + Google Login)
+- 🗺️ **Real-time Map View** using Google Maps API
+- 📍 **Geo-based Listings** with live expiry countdown
+- 🎄 **Custom Christmas-Themed UI** (Pompiere & Chicle fonts)
+- ✅ **Create / Edit / Delete Listings**
+- 👤 **My Account Dashboard** with secure password update
+- 📧 **Forgot Password** recovery option
+- ☁️ **Firebase Realtime Database** for fast, scalable storage
+- 💬 **Modal and Toast Notifications** for user feedback
+- 📱 **Fully Responsive** down to 250px width
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: React.js, Framer Motion, Custom CSS
+- **Backend**: Firebase Realtime Database
+- **Authentication**: Firebase Auth
+- **Maps**: Google Maps JavaScript API
+- **Deployment**: Firebase Hosting (optional)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔧 Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+FoodSanta/
+├── public/
+├── src/
+│   ├── Components/         # Reusable UI components (Navbar, Footer, etc.)
+│   ├── Context/            # Auth context for global user state
+│   ├── Pages/              # Page-level components (Login, Signup, Discover, MyAccount)
+│   ├── style/              # Custom CSS files
+│   ├── Assets/             # Fonts, images, and logos
+│   └── App.js
+├── .env                   # API keys (Google Maps, Firebase)
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔑 Environment Variables (`.env`)
 
-### `npm run eject`
+Create a `.env` file in the root with:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+REACT_APP_FIREBASE_API_KEY=your_firebase_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_DB_URL=your_firebase_db_url
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+REACT_APP_NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_key
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧪 Local Development
 
-## Learn More
+```bash
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Start development server
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ✅ Firebase Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Enable:
+   - Authentication → Email/Password & Google
+   - Realtime Database
+3. Add your credentials to `.env`
+4. Set database rules for open access (for testing):
 
-### Analyzing the Bundle Size
+```json
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true"
+  }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📌 Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- AI-powered suggestions for food redistribution
+- Expiry alert via email/SMS
+- Admin moderation dashboard
+- Convert to Next.js with TypeScript
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📸 Screenshots
+- HomePage
+![alt text](image.png)
 
-### Deployment
+- Functions
+![alt text](image-1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Items Listing page
+![alt text](image-2.png)
 
-### `npm run build` fails to minify
+- Map showing available food items
+![alt text](image-3.png)
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+
+This project is licensed under the MIT License.
