@@ -1,35 +1,32 @@
 import './App.css';
-import Home from './Pages/home';
-import About from './Pages/about';
-import Services from './Pages/services';
-import Contact from './Pages/contact';
-import Error from './Pages/error';
-import Signup from './Pages/signup';
-import Login from './Pages/login';
-import Discover from './Pages/discover';
-import Items from './Pages/items';
+import Home from './Pages/Home';
+import Services from './Pages/Services';
+import Error from './Pages/Error';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
+import Discover from './Pages/Discover';
+import Items from './Pages/Items';
 import { Route, Routes } from "react-router";
 import { AuthProvider } from './Context/AuthContext';
-
+import MyAccount from './Pages/MyAccount';
+import LoaderOverlay from './Components/LoaderOverlay';
 
 function App() {
-
   return (
     <AuthProvider>
-    <div className="App">
-      <Routes>
-      <Route exact path="/" element={<Home/>} ></Route>
-      <Route path="/services" element ={<Services/>} ></Route>
-      <Route path="/about"element={<About/>} ></Route>
-      <Route path="/contact"element={<Contact/>} ></Route>
-      <Route path="/signup"element={<Signup/>} ></Route>
-      <Route path="/login"element={<Login/>} ></Route>
-      <Route path="/items"element={<Items/>} ></Route>
-      <Route path="/discover"element={<Discover/>} ></Route>
-      <Route path="*" element={<Error/>} ></Route>
-
-      </Routes>
-    </div>
+      <LoaderOverlay /> 
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/items" element={<Items />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/myaccount" element={<MyAccount />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </div>
     </AuthProvider>
   );
 }

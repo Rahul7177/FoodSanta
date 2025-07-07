@@ -1,17 +1,18 @@
-
-import Navbar from '../Components/navbar';
-import Header from '../Components/header';
-import Info from '../Components/info';
-import Join from '../Components/join';
-import Footer from '../Components/footer';
+import Navbar from "../Components/Navbar";
+import Header from "../Components/Header";
+import Info from "../Components/Info";
+import Join from "../Components/Join";
+import Footer from "../Components/Footer";
+import Contact from "../Components/Contact";
 function Home() {
   return (
     <div className="App">
-      <Navbar/>
-      <Header/>
-      <Info/>
-      <Join/>
-      <Footer/>
+      <Navbar />
+      <Header />
+      <Info />
+      <Join />
+      <Contact />
+      <Footer />
     </div>
   );
 }

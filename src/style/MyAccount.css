@@ -1,0 +1,359 @@
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bgcolor1);
+    color: var(--text-color);
+    font-family: 'Pompiere', cursive;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: auto;
+    /* margin: 35px; */
+    border-radius: 3px;
+    padding: 35px;
+}
+
+.account-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.account-container h2 {
+    font-weight: 900;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.user-info {
+    width: fit-content;
+    align-self: center;
+    background: var(--bgcolor2);
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.user-info p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-info strong {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    /* color: var(--primary-color); */
+}
+
+.password-section {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.password-section input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    max-width: 500px;
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.5rem;
+}
+
+.password-section button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Pompiere', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* margin-top: 15px; */
+}
+
+.listing-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.listing-card {
+    background: var(--bgcolor2);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.listing-img {
+    width: 140px;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.listing-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.listing-content h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    font-weight: 900;
+    /* margin-bottom: 15px; */
+}
+
+.listing-date {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.accordion
+{
+    font-size: 1.2rem;
+}
+
+.accordion summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    /* align-self: start; */
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+    justify-content: center;
+    font-family: 'Pompiere', sans-serif;
+}
+
+.btn-group button {
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Pompiere', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+}
+
+.account-btn {
+    transition: transform 0.3s ease;
+}
+
+.account-btn:hover {
+    transform: translateY(-5px);
+}
+
+.btn-group .danger {
+    background: var(--primary-color);
+    color: var(--bgcolor2);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.account-modal {
+    background: var(--bgcolor2);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1001;
+}
+
+.account-modal label
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.account-modal h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.account-modal input,
+.account-modal textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.account-toast {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--text-color);
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    animation: fadeOut 5s forwards;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    .account-container {
+        min-height: 100vh;
+        
+    }
+
+    .listing-container
+    {
+        width: 100%;
+    }
+
+    .listing-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .listing-img {
+        margin-top: 25px;
+        width: 60%;
+        height: auto;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .password-section {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .password-section input {
+        display: block;
+        max-width: 100%;
+    }
+
+    .account-modal {
+        padding: 1.5rem;
+    }
+
+    .account-modal input,
+    .account-modal textarea {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .account-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .password-section {
+        flex-direction: column;
+    }
+
+    .password-section input,
+    .password-section button {
+        max-width: 100%;
+    }
+
+    .account-modal {
+        padding: 1rem;
+    }
+
+    .account-modal input,
+    .account-modal textarea {
+        font-size: 0.9rem;
+    }
+
+    .account-toast {
+        right: 0.5rem;
+        left: 0.5rem;
+        bottom: 1rem;
+        width: calc(100% - 1rem);
+        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .toast-close {
+        font-size: 1.1rem;
+        align-self: flex-end;
+    }
+}

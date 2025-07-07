@@ -1,0 +1,246 @@
+.join-section {
+  font-family: 'Pompiere', sans-serif;
+  color: var(--text-color);
+  padding: 3rem 4rem 3rem;
+  padding-top: 0;
+  text-align: center;
+  background-color: var(--bgcolor2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  margin-bottom: 50px;
+  padding-bottom: 75px;
+  width: auto;
+}
+
+.join-hr {
+  color: #000000;
+  z-index: 10002;
+  width: 100vw;
+  height: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.join-title {
+  font-family: 'Pompiere', sans-serif;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin: 35px 0 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.join-content-wrapper {
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
+  gap: 35px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.join-para {
+  background-color: var(--primary-color);
+  /* background-color: var(--bgcolor1); */
+  border-bottom: 10px solid var(--accent-color);
+  color: var(--bgcolor2);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.7;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 5px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); */
+  flex: 2;
+  height: 100%;
+  margin: 0;
+  margin-bottom: 0;
+    /* border-bottom: 10px solid var(--accent-color); */
+    width: 50%;
+    /* height: 100%; */
+}
+
+.join-card-wrapper {
+  /* flex: 1; */
+  display: flex;
+  /* justify-content: center;
+  align-items: center;
+  min-width: 300px; */
+  width: 30%;
+  max-height: 100%;
+
+}
+
+.join-card {
+  background-color: var(--bgcolor2);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px gray;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .join-card:hover {
+  transform: translateY(-10px);
+} */
+
+.join-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.join-card-body {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:transparent;
+}
+
+.join-button {
+  background-color: var(--primary-color);
+  color: var(--bgcolor2);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.join-button:hover {
+  /* background-color: var(--text-color); */
+  color: var(--bgcolor2);
+  transform: translateY(-5px);
+  /* transform: scale(1.05); */
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .join-section {
+    padding: 2rem;
+  }
+
+  .join-title {
+    font-size: 3rem;
+  }
+
+  .join-content-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .join-para {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .join-card-wrapper {
+    /* max-width: 300px; */
+    width: 98%;
+  }
+}
+
+@media (max-width: 768px) {
+  .join-section {
+    padding: 1.5rem;
+    padding-bottom: 75px;
+  }
+
+  .join-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .join-para {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+  }
+
+  .join-card-image {
+    height: 180px;
+  }
+
+  .join-button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-section {
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
+
+  .join-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .join-para {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .join-card-image {
+    height: 150px;
+  }
+
+  .join-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .join-title {
+    font-size: 1.8rem;
+  }
+
+  .join-para {
+    font-size: 0.95rem;
+  }
+
+  .join-button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.3rem;
+  }
+
+  .join-card-image {
+    height: 140px;
+  }
+}
+
+@media (max-width: 250px) {
+  .join-title {
+    font-size: 1.6rem;
+  }
+
+  .join-para {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .join-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .join-card-image {
+    height: 130px;
+  }
+}

@@ -1,0 +1,146 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Chicle&family=Pompiere&display=swap'); */
+
+
+
+.services-section {
+  padding: 3rem 1rem;
+  background: var(--bgcolor1);
+  font-family: 'Pompiere', sans-serif;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.services-title {
+  font-family: 'Pompiere', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: var(--bgcolor2);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 2rem;
+  max-width: 330px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 10px solid var(--accent-color);
+}
+
+.service-card:hover {
+  /* transform: translateY(-10px); */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.service-heading {
+  font-family: 'Chicle', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease, transform 0.2s ease;
+  font-family: 'Pompiere', sans-serif;
+}
+
+.service-button:hover {
+  /* background-color: var(--text-color); */
+  color: var(--bgcolor2);
+  transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+  }
+
+  .services-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .service-heading {
+    font-size: 1.6rem;
+  }
+
+  .service-text {
+    font-size: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .services-title {
+    font-size: 1.6rem;
+  }
+
+  .service-heading {
+    font-size: 1.3rem;
+  }
+
+  .service-text {
+    font-size: 0.95rem;
+  }
+
+  .service-button {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .service-icon img {
+    width: 60px;
+    height: 60px;
+  }
+}

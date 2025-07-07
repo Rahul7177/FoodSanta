@@ -1,41 +1,68 @@
-import React from 'react'
+import React from "react";
+import "../style/Header.css";
+import heroImg from "../Assets/Images/hero_img2.png";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div classNameName='banner'>
-        <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active" data-bs-interval="3000">
-      <img src="https://ik.imagekit.io/htocafs1d/Screenshot_2023-03-25_223015_V1qbZFRSb.png?updatedAt=1679763744847" className="carousal-img" alt="..."/>
-      <div className="carousel-caption">
-        <p>Become a santa for someone and give them a nutritious present.</p>
-      </div>
+    <section className="hero-section" id="Header">
+      <motion.div
+        className="hero-image-container"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <img
+          src={heroImg}
+          alt="Santa giving food"
+          className="hero-illustration"
+        />
+      </motion.div>
 
-    </div>
-    <div className="carousel-item" data-bs-interval="3000">
-      <img src="https://images.unsplash.com/photo-1595561579181-263fe6175b73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aHVuZ3J5JTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" className="carousal-img" alt="..."/>
-      <div className="carousel-caption">
-        <p>The food you are wasting might save lives of some people.</p>
-      </div>
-    </div>
-    <div className="carousel-item" data-bs-interval="3000">
-      <img src="https://serudsindia.org/wp-content/uploads/2020/11/Donate-Money-For-Food-In-India-To-Special-Charity-Programs.png" className="carousal-img" alt="..."/>
-      <div className="carousel-caption">
-        <p>Lets remove hunger together !</p>
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-    </div>
-  )
-}
+      <motion.div
+        className="hero-text-content"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <motion.h1
+          className="hero-heading"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Be Someone’s Santa!
+        </motion.h1>
 
-export default Header
+        <motion.p
+          className="hero-subheading"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Have Leftover Food? Help Someone Who’s Hungry
+        </motion.p>
+
+        <motion.div
+          className="hero-buttons"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+        >
+          <Link to="/services">
+            <motion.button
+              className="hero-btn share"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started ✨
+            </motion.button>
+          </Link>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Header;
