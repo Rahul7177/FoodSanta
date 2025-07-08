@@ -110,16 +110,16 @@ npm start
 
 ## 📸 Screenshots
 - HomePage
-![alt text](image.png)
-
-- Functions
 ![alt text](image-1.png)
 
-- Items Listing page
+- Functions
 ![alt text](image-2.png)
 
-- Map showing available food items
+- Items Listing page
 ![alt text](image-3.png)
+
+- Map showing available food items
+![alt text](image.png)
 ---
 
 ## 📄 License
